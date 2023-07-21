@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uas.SignInPage"
+             Shell.NavBarIsVisible="False"
+             Title="SignInPage">
+    <Grid RowDefinitions="1*,8*,1*,1*"
+          BackgroundColor="DarkRed">
+        <Frame Grid.RowSpan="2" Grid.Row="1" VerticalOptions="CenterAndExpand"
+               Margin="40">
+            <VerticalStackLayout Spacing="25">
+                <Label Text="Log In" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="DarkRed"/>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="email.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" Placeholder="Email" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="padlock.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Button BackgroundColor="DarkRed" CornerRadius="0" HeightRequest="50" Text="Log In" FontSize="20" FontAttributes="Bold" />
+
+                <Label Text="Login With" TextColor="Gray" HorizontalOptions="Center" FontAttributes="Bold"/>
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="5">
+                    <Image VerticalOptions="Center" Source="facebook.png" HeightRequest="30" WidthRequest="40"/>
+                    <Image VerticalOptions="Center" Source="google.png" HeightRequest="30" WidthRequest="30"/>
+                </StackLayout>
+                <Label Text="Forgot Password?" TextColor="Gray" HorizontalTextAlignment="Center" />
+               
+                <HorizontalStackLayout Spacing="20">
+                    <Label Text="Don't have a account?" VerticalTextAlignment="Center"/>
+                    <Label Text=" Register" FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="DarkRed"/>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignUp" />
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </Frame>
+
+        
+    </Grid>
+</ContentPage>

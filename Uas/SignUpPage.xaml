@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Uas.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             Title="SignUpPage">
+    <Grid RowDefinitions="1*,8*,1*,1*">
+        <Frame BackgroundColor="DarkRed" Grid.RowSpan="2" Grid.Row="1" VerticalOptions="CenterAndExpand"
+               Margin="40">
+            <VerticalStackLayout Spacing="25">
+                <Label Text="Register" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center"/>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="user.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" Placeholder="Full Name" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="email.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" Placeholder="Email" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="padlock.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" VerticalOptions="Center" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="padlock.png" HeightRequest="25" WidthRequest="25" />
+                        <Entry BackgroundColor="DarkRed" TextColor="White" VerticalOptions="Center" Placeholder=" Confirm Password" IsPassword="True" Grid.Column="1"/>
+
+                    </Grid>
+                </Frame>
+
+                <Button BackgroundColor="White" CornerRadius="0" HeightRequest="60" Text="Log In" FontSize="20" FontAttributes="Bold" TextColor="DarkRed"/>
+                <HorizontalStackLayout Spacing="20">
+                    <Label Text=" Login" FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           BackgroundColor="DarkRed"/>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn" />
+                    </HorizontalStackLayout.GestureRecognizers>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </Frame>
+    </Grid>
+</ContentPage>
